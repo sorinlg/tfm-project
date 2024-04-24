@@ -27,6 +27,6 @@ variable "tfm_env" {
 
 variable "tfm_module_instance" {
   default     = ""
-  description = "Component"
+  description = "Module instance"
   type        = string
 }

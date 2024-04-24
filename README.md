@@ -48,6 +48,7 @@ export _env='prod'
 export _module_instance='instance_x'
 export _module_instance='instance_y'
 export _module_instance='instance_z'
+export _module_instance='instance_foo'
 
 # general workflow
 ## init
@@ -67,6 +68,12 @@ tf "${_product}" "${_module}" "${_env}" "${_module_instance}" apply
 ## passing arbitrary flags to terraform can be done by quoting the last argument and including those flags
 ## init -reconfigure
 tf "${_product}" "${_module}" "${_env}" "${_module_instance}" 'init -reconfigure'
+
+## provider lock multi-platform
+tf "${_product}" "${_module}" "${_env}" "${_module_instance}" 'providers lock \
+ -platform=windows_amd64 \
+ -platform=darwin_amd64 \
+ -platform=linux_amd64'
 
 ## dynamic values can also be passed if you use double quotes
 export backend_flags="-backend-config=bucket=${BUCKET}"
