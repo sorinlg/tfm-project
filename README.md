@@ -2,6 +2,17 @@
 
 This is a sample project that demonstrates how to use tf-manage (tfm) to manage Terraform projects.
 
+## Requirements
+- [Ensure tf-manage requirements are met](https://github.com/sorinlg/tf-manage?tab=readme-ov-file#requirements)
+- [Install tf-manage](https://github.com/sorinlg/tf-manage?tab=readme-ov-file#installation)
+```bash
+export _desired_terraform_version='1.8.1'
+cd some_path
+git clone git@github.com:sorinlg/tf-manage.git
+cd tf-manage
+./bin/tf_install.sh "${_desired_terraform_version}"
+```
+
 ## Usage
 ### Plain local usage
 ```bash
