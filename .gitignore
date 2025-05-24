@@ -1,3 +1,6 @@
 .terraform/
 *.tfstate
 *.tfplan
+
+# ignore local tf binary (sometimes used for local testing)
+tf
