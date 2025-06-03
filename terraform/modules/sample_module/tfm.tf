@@ -1,9 +1,9 @@
 #######################################################
 # tf-manage metadata
 #######################################################
-variable "tfm_project" {
+variable "tfm_product" {
   default     = ""
-  description = "Project name"
+  description = "Product name"
   type        = string
 }
 
